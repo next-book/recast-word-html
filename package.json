@@ -1,0 +1,19 @@
+{
+  "name": "recast-word-html",
+  "version": "0.0.1",
+  "description": "Recast MS Word HTML export into Markdown",
+  "main": "index.js",
+  "bin": {
+    "recast": "bin/recast.js"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "author": "Jan Martinek",
+  "license": "MIT",
+  "dependencies": {
+    "command-line-args": "^4.0.3",
+    "rimraf": "^2.6.1",
+    "urlize": "^0.2.1"
+  }
+}
