@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Recast MS Word HTML export into Markdown",
   "main": "index.js",
+  "repository": "https://github.com/next-book/recast-word-html",
   "bin": {
     "recast": "bin/recast.js"
   },
