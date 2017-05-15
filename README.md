@@ -8,6 +8,7 @@ Very basic (dirty regex stuff) CLI conversion tool for longer texts written in n
 - preserves footnotes and fixes their links to [Multimarkdown syntax](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide)
     + footnote link: `[^num]`
     + footnote text: `[num]: text`
+- does not expect tables and lists (not needed yet)
 
 **Zero % test coverage, hence it's not submitted into npm.**
 
@@ -19,4 +20,6 @@ Very basic (dirty regex stuff) CLI conversion tool for longer texts written in n
     npm link
     recast --src=path/to/file.html
 
-Convert MS Word HTML export into UTF-8 before using this tool.
+Output folder defaults to `./out`, change it via `--out=path` param.
+
+Convert MS Word HTML export into UTF-8 before using this tool. 
