@@ -120,7 +120,7 @@ function cleanupData(data) {
         // remove single newlines, 
         [/\r\n\s*\r\n/g, '°°°'],
         [/[\r\n]/g, ' '],
-        [/°+/g, '\n\n'],
+        [/°°+/g, '\n\n'],
         
         // mark chapters
         [/<h1>(.+)<\/h1>/g, '<!-- chapter --># $1'],
@@ -133,7 +133,10 @@ function cleanupData(data) {
         [/(\s*)<b>(\s*)/g, '$1**'], [/(\s*)<\/b>(\s*)/g, '**$2'],
         
         // collapse multiple spaces into singles
-        [/ +/gm, ' ']
+        [/ +/gm, ' '],
+        
+        // break sentences into standalone lines
+        [/\. ([AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ])/, '.\n$1']
     ];
     
     return replacements.reduce((acc, pair) => acc.replace(pair[0], pair[1]), data);
