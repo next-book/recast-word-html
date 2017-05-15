@@ -72,16 +72,16 @@ function applyFootnotes(text, footnotes) {
         text += links.reduce(
             (acc, link) => {
                 if (footnotes[link]) {
-                    return acc + '\n\n[' + footnotes[link].index + ']: ' + footnotes[link].text;
+                    return acc + '\n\n[^' + footnotes[link].index + ']: ' + footnotes[link].text;
                 } else {
                     console.error('ERR: missing footnote link');
-                    return acc + '\n\n[' + link + ']: ' + 'ERR: missing footnote link';
+                    return acc + '\n\n[^' + link + ']: ' + 'ERR: missing footnote link';
                 }
             }, ''
         );
     }
     
-    return text;
+    return text + '\n';
 }
 
 function cleanupData(data) {
